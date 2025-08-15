@@ -30,3 +30,8 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+mykey.pem
+mykey.pub
+server.pem
+server.pub

@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	ssh "github.com/justmamadou/go-ssh/cmd/keygen"
 	"os"
+
+	ssh "github.com/justmamadou/go-ssh"
 )
 
 func main() {
@@ -21,7 +22,7 @@ func main() {
 		fmt.Printf("Error while writing private key to pem file: %s\n", err)
 		os.Exit(1)
 	}
-	if err = os.WriteFile("mykeyp.pub", publicKey, 0640); err != nil {
+	if err = os.WriteFile("mykey.pub", publicKey, 0640); err != nil {
 		fmt.Printf("Error while writing public key to pem file: %s\n", err)
 		os.Exit(1)
 	}
